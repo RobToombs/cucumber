@@ -15,4 +15,8 @@ public class Account {
     public Double getBalance() {
         return balance;
     }
+
+    public void deduct(Double amount) {
+        balance -= amount;
+    }
 }

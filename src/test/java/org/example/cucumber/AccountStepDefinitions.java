@@ -1,5 +1,6 @@
 package org.example.cucumber;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -18,6 +19,11 @@ public class AccountStepDefinitions {
     @When("the account is credited with {double}")
     public void whenAccountIsCredited(Double amount) {
         account.credit(amount);
+    }
+
+    @And("a payment of {double} is made")
+    public void aPaymentOfIsMade(Double amount) {
+        account.deduct(amount);
     }
 
     @Then("account should have a balance of {double}")
