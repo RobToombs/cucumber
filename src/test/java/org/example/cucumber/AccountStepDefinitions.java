@@ -7,8 +7,7 @@ import org.example.Account;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StepDefinitions {
-
+public class AccountStepDefinitions {
     private Account account;
 
     @Given("account balance is {double}")
@@ -25,5 +24,5 @@ public class StepDefinitions {
     public void thenAccountShouldHaveBalance(Double expectedBalance) {
         assertEquals(expectedBalance, account.getBalance());
     }
-}
 
+}
