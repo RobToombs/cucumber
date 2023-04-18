@@ -44,6 +44,7 @@ tasks.register('cucumberCli') {
             args = [
                     '--plugin', 'pretty',
                     '--plugin', 'html:target/cucumber-report.html',
+                    '--plugin', 'json:target/cucumber-report.json',
                     '--glue', 'org.example.cucumber',
                     'src/test/resources']
         }
