@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        docker { image 'node:16.13.1-alpine' }
+        docker { image 'gradle:8.1-jdk17-alpine' }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
+                sh './gradlew cucumberCli'
             }
         }
     }
